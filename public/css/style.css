@@ -9,7 +9,7 @@ body {
 .form-control {
   height: 50px;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 40px;
   color: white;
   border-width: 1px;
   border-style: solid;
@@ -23,4 +23,35 @@ body {
 .login-wrap {
   position: relative;
   color: rgba(255, 255, 255, 0.9);
+}
+
+.field-icon {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.signin-form {
+  position: relative;
+}
+
+.form-control {
+  padding-right: 40px;
+}
+
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
