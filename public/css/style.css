@@ -9,7 +9,7 @@ body {
 .form-control {
   height: 50px;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 40px;
   color: white;
   border-width: 1px;
   border-style: solid;
@@ -27,12 +27,20 @@ body {
 
 .field-icon {
   position: absolute;
-  top: 46%;
-  right: 15px;
+  top: 40%;
+  right: 20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.9);
+}
+
+.signin-form {
+  position: relative;
+}
+
+.form-control {
+  padding-right: 40px;
 }
 
 .fa-fw {
