@@ -24,3 +24,26 @@ body {
   position: relative;
   color: rgba(255, 255, 255, 0.9);
 }
+
+.field-icon {
+  position: absolute;
+  top: 46%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
