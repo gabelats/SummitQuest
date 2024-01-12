@@ -1,0 +1,26 @@
+{
+  "name": "summitquest",
+  "version": "1.0.0",
+  "description": "log and track your data for CO fourteeners",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gabelats/SummitQuest.git"
+  },
+  "keywords": [
+    "Hiking",
+    "Climbing",
+    "Mountains",
+    "Colorado"
+  ],
+  "author": "Babysteps Devs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabelats/SummitQuest/issues"
+  },
+  "homepage": "https://github.com/gabelats/SummitQuest#readme"
+}
