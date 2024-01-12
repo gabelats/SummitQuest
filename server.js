@@ -8,6 +8,8 @@ const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const helpers = require("./utils/helper");
 
+const emailJSPublicKey = process.env.EMAILJS_PUBLIC_KEY;
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -22,6 +24,12 @@ const sess = {
 };
 
 app.use(session(sess));
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/email-js-config", (req, res) => {
+  res.json({ emailJSPublicKey });
+});
 
 const hbs = exphbs.create({ helpers });
 
