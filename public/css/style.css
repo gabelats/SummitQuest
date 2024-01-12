@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("../images/Eastern_Sangre_de_Cristo_14ers.jpg") no-repeat
+    center center fixed;
+  background-size: cover;
+}
+.form-control {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
+  transition: all 0.3s ease 0s;
+}
+
+.login-wrap {
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
