@@ -30,7 +30,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="login-wrap p-0">
             <h3 class="mb-4 text-center">Sign In to Begin Your Quest</h3>
-            <form action="#" class="signin-form">
+            <form action="#" class="signin-form" id="loginForm">
               <div class="form-group">
                 <input
                   type="text"
@@ -39,7 +39,7 @@
                   required
                 />
               </div>
-              <div class="form-group">
+              <div class="form-group field-container">
                 <input
                   id="password-field"
                   type="password"
@@ -48,12 +48,27 @@
                   required
                 />
                 <span
+                  id="password-toggle-icon"
                   toggle="#password-field"
                   class="fa fa-fw fa-eye field-icon toggle-password"
                 ></span>
+
+                <div
+                  class="form-group"
+                  id="emailField"
+                  style="display: none; margin-top: 15px"
+                >
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
               </div>
               <div class="form-group">
                 <button
+                  id="submitButton"
                   type="submit"
                   class="form-control btn btn-primary submit px-3"
                 >
@@ -73,7 +88,7 @@
                 </div>
               </div>
             </form>
-            <a href="#" style="color: #fff">Or Sign Up Here</a>
+            <a href="#" id="signUpLink" style="color: #fff">Or Sign Up Here</a>
           </div>
         </div>
       </div>
