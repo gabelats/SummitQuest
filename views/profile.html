@@ -10,36 +10,66 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="d-flex col">
-      <aside class="">
-        <div class="card d-flex" style="width: 18rem">
-          <img
-            class="card-img-top border border-black rounded-circle"
-            src="https://media.istockphoto.com/id/519078727/photo/male-silhouette-as-avatar-profile-picture.webp?b=1&s=170667a&w=0&k=20&c=JzPsyMEFcdQp2UlFqLVeuOaj2bOpteXUWFR9FJzTnBM="
-            alt="..."
-          />
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LogOut</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex w-100 vh-100 justify-content-center align-items-top">
+      <aside class="container-fluid d-flex col-lg-4 col-md-6 col-sm-12 m-2">
+        <div class="container card d-flex custom-border">
+          <div class="container d-flex flex-row">
+            <div class="col-6 m-2">
+              <img
+                class="card-img-top border border-black rounded-circle"
+                src="https://media.istockphoto.com/id/519078727/photo/male-silhouette-as-avatar-profile-picture.webp?b=1&s=170667a&w=0&k=20&c=JzPsyMEFcdQp2UlFqLVeuOaj2bOpteXUWFR9FJzTnBM="
+                alt="..."
+              />
+            </div>
+            <div class="col-6 card-body align-items-end">
+              <h2>Name</h2>
+              <h3>Member Since</h3>
+              <p>MM/YYYY</p>
+            </div>
+          </div>
           <div class="card-body">
-            <h5 class="card-title d-flex justify-content-end align-items-top">
-              Name
-            </h5>
             <h5>User bio</h5>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              bulk of the card's content. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Reiciendis quidem a voluptate dolor labore
+              dolorem ipsam accusamus, eligendi magnam exercitationem rem
+              quaerat eius commodi dolorum suscipit numquam praesentium corporis
+              dolores.
             </p>
+
+            <div class="list-group list-group-flush">
+              <li class="list-group-item">
+                <h3>Featured Summit</h3>
+                <img
+                  class="img-fluid border"
+                  src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+                />
+                <p>Mountain Climbed on MM/DD/YYYY</p>
+              </li>
+              <li class="list-group-item">Statistics</li>
+              <li class="list-group-item">A third item</li>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-          <div class="card-body"></div>
         </div>
       </aside>
       <section
-        class="d-flex align-items-end flex-column justify-content-start border border-black"
+        class="d-flex align-items-end flex-column justify-content-start border border-black m-2"
       >
-        <section class="mb-5">
+        <section>
           <div class="card border border-black rounded h-100 d-inline-block">
             <div class="card-body">
               <h3 class="card-title">User Queue</h3>
