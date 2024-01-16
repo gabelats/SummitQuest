@@ -5,18 +5,18 @@ const { Hikes, Peaks, Users } = require("../models");
 //send all completed hikes to users profile page
 router.get("/", async (req, res) => {
   try {
-    const peakData = await Peaks.findAll({
+    const userData = await Users.findAll({
       include: [
         {
-          model: Users,
-          attributes: ["username"],
+          model: Peaks,
+          through: Hikes,
         },
       ],
-      where: {
-        completed: true,
-      },
+      //   where: {
+      //     completed: true,
+      //   },
     });
-    const peaks = peakData.map((peaks) => peaks.get({ plain: true }));
+    const peaks = userData.map((user) => user.get({ plain: true }));
 
     res.render("profile", {
       peaks,
