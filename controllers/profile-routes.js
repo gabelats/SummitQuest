@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Users, Hikes, Peaks } = require("../../models");
+const { Users, Hikes, Peaks } = require("../models");
 
 //http://localhost:3001/profile/:username
 router.get("/:username", async (req, res) => {
