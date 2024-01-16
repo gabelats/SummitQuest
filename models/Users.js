@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
-
 class Users extends Model {
   checkPassword(login) {
     return bcrypt.compareSync(login, this.password);
@@ -32,14 +31,14 @@ Users.init(
       allowNull: false,
     },
     completed_peaks: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.INTEGER,
       references: {
         model: "peaks",
         key: "id",
       },
     },
     wishlist: {
-      type: DataTypes.ARRAY,
+      type: DataTypes.INTEGER,
       references: {
         model: "peaks",
         key: "id",
