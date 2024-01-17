@@ -1,12 +1,29 @@
-const seedPeaks = require("./peak-seed");
-
 const sequelize = require("../config/connection");
+const { Hikes, Peaks, Users } = require("../models");
+const hikesData = require("./hike-seed");
+const peaksData = require("./peak-seed");
+const usersData = require("./user-seed");
 
-const seedAll = async () => {
+const seedDb = async () => {
   await sequelize.sync({ force: true });
-  console.log("\n----- DATABASE SYNCED -----\n");
-  await seedPeaks();
-  console.log("\n----- PEAKS SEEDED -----\n");
+
+  const users = await Users.bulkCreate(usersData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  for (const peaks of peaksData) {
+    await Peaks.create({
+      ...peaks,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+  for (const hikes of hikesData) {
+    await Hikes.create({
+      ...hikes,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
   process.exit(0);
 };
-seedAll();
+seedDb();

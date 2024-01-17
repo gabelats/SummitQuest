@@ -12,10 +12,12 @@ router.get("/", async (req, res) => {
           through: Hikes,
         },
       ],
-      //   where: {
-      //     completed: true,
-      //   },
+
+      // where: {
+      //   completed: true,
+      // },
     });
+
     const peaks = userData.map((user) => user.get({ plain: true }));
 
     res.render("profile", {
@@ -28,29 +30,30 @@ router.get("/", async (req, res) => {
 });
 
 //http://localhost:3001/
-router.get("/", async (req, res) => {
-  try {
-    const peakData = await Peaks.findAll({
-      include: [
-        {
-          model: Users,
-          attributes: ["username"],
-        },
-      ],
-      where: {
-        completed: false,
-      },
-    });
-    const peaks = peakData.map((peaks) => peaks.get({ plain: true }));
+// router.get("/", async (req, res) => {
+//   try {
+//     const peakData = await Peaks.findAll({
+//       include: [
+//         {
+//           model: Users,
+//           attributes: ["username"],
+//           through: Hikes,
+//         },
+//       ],
+//       where: {
+//         completed: false,
+//       },
+//     });
+//     const peaks = peakData.map((peaks) => peaks.get({ plain: true }));
 
-    res.render("profile", {
-      peaks,
-      logged_in: req.session.logged_in,
-    });
-  } catch (error) {
-    res.status(500).json(error);
-  }
-});
+//     res.render("profile", {
+//       peaks,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (error) {
+//     res.status(500).json(error);
+//   }
+// });
 
 //http://localhost:3001/peaks/{id passed/selected}
 router.get("/peaks/:id", async (req, res) => {
@@ -60,6 +63,7 @@ router.get("/peaks/:id", async (req, res) => {
         {
           model: Users,
           attributes: ["username"],
+          through: Hikes,
         },
       ],
     });
