@@ -3,7 +3,7 @@ const router = require("express").Router();
 const { Hikes, Users } = require("../../models");
 const withAuth = require("../../utils/auth");
 
-//http://localhost:3001/hikes
+//http://localhost:3001/api/hikes
 router.post("/", withAuth, async (req, res) => {
   try {
     const userId = req.session.user_id;
@@ -16,15 +16,6 @@ router.post("/", withAuth, async (req, res) => {
       completed: req.body.completed,
       journal: req.body.journal,
     });
-    console.log(newHike);
-    // if (newHike.completed) {
-    //   await Users.update({
-    //     where: {
-    //       id: req.session.user_id,
-    //       // completed_peaks: 0,
-    //     },
-    //   });
-    // }
     res.status(200).json(newHike);
   } catch (error) {
     console.log(error);

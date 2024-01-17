@@ -2,58 +2,14 @@ const router = require("express").Router();
 const { Hikes, Peaks, Users } = require("../models");
 
 //http://localhost:3001/
-//send all completed hikes to users profile page
 router.get("/", async (req, res) => {
-  try {
-    const userData = await Users.findAll({
-      // where: {
-      //   completed: true,
-      // },
-      include: [
-        {
-          model: Peaks,
-          through: Hikes,
-        },
-      ],
-    });
-    res.status(200).json(userData);
-    // const peaks = userData.map((user) => user.get({ plain: true }));
-
-    // res.render("profile", {
-    //   peaks,
-    //   logged_in: req.session.logged_in,
-    // });
-  } catch (error) {
-    res.status(500).json(error);
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+  }
+  if (req.session.logged_in) {
+    res.redirect(`profile/${req.session.username}`);
   }
 });
-
-//http://localhost:3001/
-// router.get("/", async (req, res) => {
-//   try {
-//     const peakData = await Peaks.findAll({
-//       include: [
-//         {
-//           model: Users,
-//           attributes: ["username"],
-//           through: Hikes,
-//         },
-//       ],
-//       where: {
-//         completed: false,
-//       },
-//     });
-//     const peaks = peakData.map((peaks) => peaks.get({ plain: true }));
-
-//     res.render("profile", {
-//       peaks,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (error) {
-//     res.status(500).json(error);
-//   }
-// });
-
 //http://localhost:3001/peaks/{id passed/selected}
 router.get("/peaks/:id", async (req, res) => {
   try {
