@@ -12,16 +12,15 @@ router.get("/:username", async (req, res) => {
       include: Peaks,
     });
     console.log(userByName);
-    res.status(200).json(userByName);
 
-    // const user = await userByName.map((user) =>
-    //   userByName.get({ plain: true })
-    // );
+    const user = await userByName.map((user) =>
+      userByName.get({ plain: true })
+    );
 
-    // res.render("profile", {
-    //   user,
-    //   logged_in: req.session.logged_in,
-    // });
+    res.render("profile", {
+      user,
+      logged_in: req.session.logged_in,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
