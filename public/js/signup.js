@@ -19,11 +19,15 @@ $(".signin-Form").on("submit", function (event) {
 
   formData.username = document.getElementById("username-field").value;
   formData.email = document.getElementById("email-field").value;
-  formData.password = document.getElementById("password-field");
 
   $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
     type: "POST",
-    data: formData,
+    data: {
+      template_id: EMAILJS_PUBLIC_KEY,
+      user_id: TEMPLATE_ID,
+      service_id: SERVICE_ID,
+      template_params: formData,
+    },
     contentType: false,
     processData: false,
   })
