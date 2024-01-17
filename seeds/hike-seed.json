@@ -1,7 +1,16 @@
 [
   {
+    "userId": 1,
+    "peakId": 1,
     "time_taken": "4",
     "completed": true,
     "journal": "I liked this climb very much"
+  },
+  {
+    "userId": 2,
+    "peakId": 2,
+    "time_taken": "4",
+    "completed": false,
+    "journal": "I liked this climb very much more than the other one"
   }
 ]

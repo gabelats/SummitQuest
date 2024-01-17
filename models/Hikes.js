@@ -11,20 +11,6 @@ Hikes.init(
       autoIncrement: true,
       primaryKey: true,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "users",
-        key: "id",
-      },
-    },
-    peak_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "peaks",
-        key: "id",
-      },
-    },
     time_taken: {
       type: DataTypes.INTEGER,
     },

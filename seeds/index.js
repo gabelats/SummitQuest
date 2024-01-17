@@ -18,12 +18,11 @@ const seedDb = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-  for (const hikes of hikesData) {
-    await Hikes.create({
-      ...hikes,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+  await Hikes.bulkCreate(hikesData, {
+    individualHooks: true,
+    returning: true,
+  });
+
   process.exit(0);
 };
 seedDb();
