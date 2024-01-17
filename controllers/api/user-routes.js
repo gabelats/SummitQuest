@@ -6,13 +6,15 @@ router.get("/", async (req, res) => {
   try {
     const allUsers = await Users.findAll();
 
-    res.ststua(200).json(allUsers);
+    res.status(200).json(allUsers);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
   }
 });
 
+// http://localhost:3001/api/users/
+// sign up
 router.post("/", async (req, res) => {
   try {
     const newUser = await Users.create({
@@ -28,6 +30,7 @@ router.post("/", async (req, res) => {
       res.status(200).json(newUser);
     });
   } catch (error) {
+    console.log(error);
     res.status(500).json(error);
   }
 });

@@ -1,0 +1,466 @@
+[
+  {
+    "peak_name": "Mt. Elbert",
+    "elevation": 14440,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Massive",
+    "elevation": 14428,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Harvard",
+    "elevation": 14421,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "La Plata Peak",
+    "elevation": 14361,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Antero",
+    "elevation": 14276,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Shavano",
+    "elevation": 14231,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Princeton",
+    "elevation": 14204,
+    "location": "Sawatch Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Yale",
+    "elevation": 14200,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Belford",
+    "elevation": 14203,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Tabeguache Peak",
+    "elevation": 14231,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Oxford",
+    "elevation": 14203,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Columbia",
+    "elevation": 14077,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Missouri Mountain",
+    "elevation": 14074,
+    "location": "Sawatch Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mount of the Holy Cross",
+    "elevation": 14011,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Huron Peak",
+    "elevation": 14012,
+    "location": "Sawatch Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Bierstadt",
+    "elevation": 14065,
+    "location": "Front Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Blue Sky",
+    "elevation": 14268,
+    "location": "Front Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Longs Peak",
+    "elevation": 14259,
+    "location": "Front Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Pikes Peak",
+    "elevation": 14115,
+    "location": "Front Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Grays Peak",
+    "elevation": 14275,
+    "location": "Front Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Torreys Peak",
+    "elevation": 14278,
+    "location": "Front Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Uncompahgre Peak",
+    "elevation": 14365,
+    "location": "San Juan Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mount Wilson",
+    "elevation": 14268,
+    "location": "San Juan Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "El Diente Peak",
+    "elevation": 14165,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mount Sneffels",
+    "elevation": 14150,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Windom Peak",
+    "elevation": 14321,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mount Eolus",
+    "elevation": 14090,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Sunlight Peak",
+    "elevation": 14065,
+    "location": "San Juan Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Handies Peak",
+    "elevation": 14048,
+    "location": "San Juan Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "North Eolus",
+    "elevation": 14045,
+    "location": "San Juan Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Redcloud Peak",
+    "elevation": 14041,
+    "location": "San Juan Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Wilson Peak",
+    "elevation": 14023,
+    "location": "San Juan Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Wetterhorn Peak",
+    "elevation": 14021,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "San Luis Peak",
+    "elevation": 14022,
+    "location": "San Juan Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Sunshine Peak",
+    "elevation": 14041,
+    "location": "San Juan Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Castle Peak",
+    "elevation": 14278,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Maroon Peak",
+    "elevation": 14163,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Capitol Peak",
+    "elevation": 14137,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Snowmass Mountain",
+    "elevation": 14099,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Conundrum Peak",
+    "elevation": 14040,
+    "location": "Elk Range",
+    "difficulty": "Medium",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Pyramid Peak",
+    "elevation": 14025,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "North Maroon Peak",
+    "elevation": 14019,
+    "location": "Elk Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Quandary Peak",
+    "elevation": 14265,
+    "location": "Ten Mile Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Lincoln",
+    "elevation": 14293,
+    "location": "Mosquito Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Cameron",
+    "elevation": 14238,
+    "location": "Mosquito Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Democrat",
+    "elevation": 14154,
+    "location": "Mosquito Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Bross",
+    "elevation": 14178,
+    "location": "Mosquito Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Sherman",
+    "elevation": 14043,
+    "location": "Mosquito Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Blanca Peak",
+    "elevation": 14351,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Cresone Peak",
+    "elevation": 14300,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Crestone Needle",
+    "elevation": 14203,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Kit Carson Peak",
+    "elevation": 14171,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Challenger Point",
+    "elevation": 14087,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Humboldt Peak",
+    "elevation": 14070,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Culebra Peak",
+    "elevation": 14053,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Easy",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Mt. Lindsey",
+    "elevation": 14048,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Medium",
+    "permit_required": true,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Ellingwood Point",
+    "elevation": 14048,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Easy",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  },
+  {
+    "peak_name": "Little Bear Peak",
+    "elevation": 14043,
+    "location": "Sangre de Cristo Range",
+    "difficulty": "Hard",
+    "permit_required": false,
+    "peak_image_route": "coming soon"
+  }
+]
