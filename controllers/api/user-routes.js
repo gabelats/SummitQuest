@@ -35,7 +35,9 @@ router.post("/", async (req, res) => {
 //http://localhost:3001/api/users/login
 router.post("/login", async (req, res) => {
   try {
-    const userData = await Users.findOne({ where: { email: req.body.email } });
+    const userData = await Users.findOne({
+      where: { username: req.body.username },
+    });
     if (!userData) {
       res.status(400).json({ message: "incorrect email or password" });
     }
