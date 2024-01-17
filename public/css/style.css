@@ -1,4 +1,4 @@
-body {
+body.login-page {
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -54,4 +54,37 @@ body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.custom-border {
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+}
+
+.custom-bg {
+  background-color: lightblue;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 31, 63, 0.7);
+  padding: 10px;
+  box-sizing: border-box;
+  color: #fff;
 }

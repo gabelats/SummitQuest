@@ -1,3 +1,17 @@
+<nav class="d-flex flex-row align-items-center">
+  <h1 class="fw-bold p-3">SummitQuest</h1>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">LogOut</a>
+    </li>
+  </ul>
+</nav>
 <div
   class="d-flex w-100 vh-100 justify-content-center align-items-top container"
 >
@@ -96,9 +110,9 @@
         <div class="col-6 mt-2 mb-2 container">
           <!-- Can use a partial to dynamically create these in handlebars -->
           <ol class="list-group list-group-numbered">
-           {{#each liWishlist}}
-            {{>partials/liWishlist this}}
-           {{/each}}
+            {{#each liWishlist}}
+              {{>partials/liWishlist this}}
+            {{/each}}
           </ol>
         </div>
       </div>
@@ -157,9 +171,9 @@
         <div class="col-6 mt-2 mb-2 container">
           <!-- Can use a partial to dynamically create these in handlebars -->
           <ol class="list-group list-group-numbered">
-           {{#each liCompleted}}
-            {{>partials/liCompleted this}}
-           {{/each}}
+            {{#each liCompleted}}
+              {{>partials/liCompleted this}}
+            {{/each}}
           </ol>
         </div>
       </div>
