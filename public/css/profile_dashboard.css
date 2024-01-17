@@ -1,0 +1,46 @@
+.custom-border {
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+}
+
+.custom-bg {
+  background-color: lightblue;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 31, 63, 0.7);
+  padding: 10px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.form-control {
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 40px;
+  color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 40px;
+  transition: all 0.3s ease 0s;
+}
