@@ -1,0 +1,354 @@
+<div
+  class="d-flex w-100 vh-100 justify-content-center align-items-top container"
+>
+  <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
+    <div class="container flex-column d-flex">
+      <div class="container d-flex flex-row custom-border mt-2">
+        <div class="col-6 m-2">
+          <img
+            class="card-img-top border border-black rounded-circle"
+            src="https://media.istockphoto.com/id/519078727/photo/male-silhouette-as-avatar-profile-picture.webp?b=1&s=170667a&w=0&k=20&c=JzPsyMEFcdQp2UlFqLVeuOaj2bOpteXUWFR9FJzTnBM="
+            alt="..."
+          />
+        </div>
+        <div class="col-6 card-body align-items-end">
+          <h2>{{userame}}</h2>
+          <h5>Member Since:</h5>
+          <p>{{format_date createdAt}}</p>
+        </div>
+      </div>
+      <div class="card-body mt-2 custom-border">
+        <h5>User bio</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Reiciendis quidem a voluptate dolor labore dolorem
+          ipsam accusamus, eligendi magnam exercitationem rem quaerat eius
+          commodi dolorum suscipit numquam praesentium corporis dolores.
+        </p>
+        <h5>Featured Summit</h5>
+        <div class="image-container">
+          <img
+            class="img-fluid"
+            src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+          />
+
+          <p class="overlay">{{peak_name}} Climbed on {{date}}</p>
+        </div>
+      </div>
+      <div class="card-body custom-border mt-2">
+        <h5>My Summit Quest Progress:</h5>
+        <ol class="list-group m-2">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Peaks Completed </div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{completed_peaks.length}}</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Elevation Climbed</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">Elevation</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Peaks Attempted</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">#/58</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Most Difficult Summit</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">Peak #1</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </aside>
+  <section class="d-flex align-items-end flex-column">
+    <section>
+      <div class="d-flex flex-row custom-border mt-2 container">
+        <div class="m-2 col-6">
+          <h3 class="card-title">Name's Summit Queue</h3>
+          <h5>Next Summits:</h5>
+
+          <div class="image-container">
+            <img
+              class="img-fluid"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            />
+
+            <p class="overlay">Peak #1</p>
+          </div>
+        </div>
+        <div class="col-6 mt-2 mb-2 container">
+          <!-- Can use a partial to dynamically create these in handlebars -->
+          <ol class="list-group list-group-numbered">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #2</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #3</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #4</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #5</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #6</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #7</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #8</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #9</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="container custom-border col-12 mt-2">
+        <h5 class="m-2">Add a Mountain to your Quest:</h5>
+        <form action="#" id="questForm">
+          <div class="form-group m-2">
+            <label class="fw-bold" for="dropdown1">Mountain Range</label>
+            <select id="dropdown1" name="option1" class="form-control">
+
+              <option value="Sawatch_Range">Sawatch Range</option>
+              <option value="Sangre_de_Cristo">Sangre de Cristo</option>
+              <option
+                value="San_Juan_Mountains
+                    "
+              >
+                San Juan Mountains
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group m-2">
+            <label class="fw-bold" for="dropdown2">Peak Name</label>
+            <select id="dropdown2" name="option2" class="form-control">
+              {{#each peaks}}
+                <option value={{id}}>{{peak_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="form-group m-2">
+            <input
+              type="submit"
+              value="Submit"
+              class="form-control btn btn-primary submit px-3"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+    <article>
+      <div class="d-flex flex-row custom-border mt-2 container">
+        <div class="m-2 col-6">
+          <h3 class="card-title">{{username}}'s Completed Peaks</h3>
+          <h5>Most Recent Summit:</h5>
+
+          <div class="image-container">
+            <img
+              class="img-fluid"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            />
+
+            <p class="overlay">Peak #1</p>
+          </div>
+        </div>
+        <div class="col-6 mt-2 mb-2 container">
+          <!-- Can use a partial to dynamically create these in handlebars -->
+          <ol class="list-group list-group-numbered">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #2</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #3</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #4</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #5</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #6</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #7</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #8</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
+              <div class="ms-2 me-auto">
+                <div class="fw-bold">Peak #9</div>
+              </div>
+              <span class="badge bg-primary rounded-pill">Mountain Range</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="container col-12 custom-border mt-2">
+        <h5 class="m-2">Record a SummitQuest:</h5>
+        <form action="#" id="completeQuest">
+          <div class="form-group m-2">
+            <label class="fw-bold" for="dropdown1">Mountain Range</label>
+            <select id="dropdown1" name="option1" class="form-control">
+              <option value="Sawatch_Range">Sawatch Range</option>
+              <option value="Sangre_de_Cristo">Sangre de Cristo</option>
+              <option
+                value="San_Juan_Mountains
+                  "
+              >
+                San Juan Mountains
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group m-2">
+            <label class="fw-bold" for="dropdown2">Peak Name</label>
+            <select id="dropdown2" name="option2" class="form-control">
+              {{#each peaks}}
+                <option value={{id}}>{{peak_name}}</option>
+              {{/each}}
+            </select>
+          </div>
+
+          <div class="form-group m-2">
+            <label class="fw-bold" for="date">Date</label>
+            <input type="date" id="date" name="date" class="form-control" />
+          </div>
+
+          <div class="form-group m-2">
+            <label class="fw-bold" for="comment">Comment</label>
+            <textarea
+              id="comment"
+              name="comment"
+              rows="4"
+              class="form-control"
+            ></textarea>
+          </div>
+
+          <div class="form-group m-2">
+            <label class="fw-bold" for="weather">Weather</label>
+            <textarea
+              id="weather"
+              name="weather"
+              rows="4"
+              class="form-control"
+            ></textarea>
+          </div>
+          <div class="form-group m-2">
+            <label class="fw-bold" for="completed">Completed</label>
+            <input type="checkbox" id="completed" name="completed" />
+          </div>
+          <div class="form-group m-2">
+            <input
+              type="submit"
+              value="Submit"
+              class="form-control btn btn-primary submit px-3"
+            />
+          </div>
+        </form>
+      </div>
+    </article>
+  </section>
+</div>
+<script src="../public/js/profile.js"></script>
