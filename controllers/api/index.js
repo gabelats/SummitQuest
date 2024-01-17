@@ -10,6 +10,6 @@ router.use("/peaks", peakRoutes);
 router.use("/hikes", hikeRoutes);
 
 //http://localhost:3001/api/users
-router.use("./users", userRoutes);
+router.use("/users", userRoutes);
 
 module.exports = router;

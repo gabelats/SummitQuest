@@ -6,24 +6,23 @@ const { Hikes, Peaks, Users } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const userData = await Users.findAll({
+      // where: {
+      //   completed: true,
+      // },
       include: [
         {
           model: Peaks,
           through: Hikes,
         },
       ],
-
-      // where: {
-      //   completed: true,
-      // },
     });
+    res.status(200).json(userData);
+    // const peaks = userData.map((user) => user.get({ plain: true }));
 
-    const peaks = userData.map((user) => user.get({ plain: true }));
-
-    res.render("profile", {
-      peaks,
-      logged_in: req.session.logged_in,
-    });
+    // res.render("profile", {
+    //   peaks,
+    //   logged_in: req.session.logged_in,
+    // });
   } catch (error) {
     res.status(500).json(error);
   }

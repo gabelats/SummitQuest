@@ -4,6 +4,7 @@ const { Users, Hikes, Peaks } = require("../models");
 //http://localhost:3001/profile/:username
 router.get("/:username", async (req, res) => {
   try {
+    console.log(`line 7: ${req.params.username}`);
     const userByName = await Users.findOne({
       where: {
         username: req.params.username,
@@ -13,22 +14,20 @@ router.get("/:username", async (req, res) => {
           model: Peaks,
           through: Hikes,
         },
-        { model: Hikes },
+        // { model: Hikes },
       ],
-      where: {
-        completed: true,
-      },
     });
     console.log(userByName);
+    res.status(200).json(userByName);
 
-    const user = await userByName.map((user) =>
-      userByName.get({ plain: true })
-    );
+    // const user = await userByName.map((user) =>
+    //   userByName.get({ plain: true })
+    // );
 
-    res.render("profile", {
-      user,
-      logged_in: req.session.logged_in,
-    });
+    // res.render("profile", {
+    //   user,
+    //   logged_in: req.session.logged_in,
+    // });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
