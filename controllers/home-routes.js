@@ -3,6 +3,7 @@ const { Hikes, Peaks, Users } = require("../models");
 
 //http://localhost:3001/
 //send all completed hikes to users profile page
+
 router.get("/", async (req, res) => {
   try {
     const userData = await Users.findAll({
