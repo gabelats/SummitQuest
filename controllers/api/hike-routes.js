@@ -8,7 +8,7 @@ router.post("/", withAuth, async (req, res) => {
     const userId = req.session.username;
     const newHike = await Hikes.create({
       user_id: userId,
-      peak_id: peak_name,
+      peak_id: req.body.peak_id,
       time_taken: req.body.time_taken,
       date: req.body.date,
       completed: req.body.completed,
