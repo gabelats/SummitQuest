@@ -33,14 +33,14 @@ Users.init(
     completed_peaks: {
       type: DataTypes.INTEGER,
       references: {
-        model: "peaks",
+        model: "hikes",
         key: "id",
       },
     },
     wishlist: {
       type: DataTypes.INTEGER,
       references: {
-        model: "peaks",
+        model: "hikes",
         key: "id",
       },
     },

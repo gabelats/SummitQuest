@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Users, Hikes, Peaks } = require("../../models");
+const bcrypt = require("bcrypt");
 
 //http://localhost:3001/api/users/
 router.get("/", async (req, res) => {
