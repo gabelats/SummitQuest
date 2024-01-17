@@ -9,13 +9,7 @@ router.get("/:username", async (req, res) => {
       where: {
         username: req.params.username,
       },
-      include: [
-        {
-          model: Peaks,
-          through: Hikes,
-        },
-        // { model: Hikes },
-      ],
+      include: Peaks,
     });
     console.log(userByName);
     res.status(200).json(userByName);
