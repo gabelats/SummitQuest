@@ -14,57 +14,53 @@ document.querySelectorAll(".toggle-password").forEach(function (toggle) {
 
 var formData = {};
 
-$(".signin-Form").on("submit", function (event) {
-  event.preventDefault();
+// $(".signin-Form").on("submit", function (event) {
+//   event.preventDefault();
 
-  formData.username = document.getElementById("username-field").value;
-  formData.email = document.getElementById("email-field").value;
+//   formData.username = document.getElementById("username-field").value;
+//   formData.email = document.getElementById("email-field").value;
 
-  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-    type: "POST",
-    data: {
-      template_id: EMAILJS_PUBLIC_KEY,
-      user_id: TEMPLATE_ID,
-      service_id: SERVICE_ID,
-      template_params: formData,
-    },
-    contentType: false,
-    processData: false,
-  })
-    .done(function () {
-      alert("Your mail is sent!");
-    })
-    .fail(function (error) {
-      alert("Oops... " + JSON.stringify(error));
-    });
-});
+//   $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+//     type: "POST",
+//     data: {
+//       template_id: EMAILJS_PUBLIC_KEY,
+//       user_id: TEMPLATE_ID,
+//       service_id: SERVICE_ID,
+//       template_params: formData,
+//     },
+//     contentType: false,
+//     processData: false,
+//   })
+//     .done(function () {
+//       alert("Your mail is sent!");
+//     })
+//     .fail(function (error) {
+//       alert("Oops... " + JSON.stringify(error));
+//     });
+// });
 //POST https://api.emailjs.com/api/v1.0/email/send-form
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector("#username-field").value.trim();
-  const emailVal = document.querySelector("#email-field").value.trim();
-  const passwordVal = document.querySelector("#password-field").value.trim();
-  const bodyObj = {
-    username: name,
-    email: emailVal,
-    password: passwordVal,
-  };
-  if (name && email && password) {
+  const username = document.querySelector("#username-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
+
+  if (username && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify(bodyObj),
+      body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace(`profile/${req.session.username}`);
+      document.location.replace("/dashboard");
     } else {
-      console.log(response.statusText);
+      alert(response.statusText);
     }
   }
 };
 
-const signupForm = document.querySelector("#signUpForm");
+const signupForm = document.querySelector("#signup-form");
 
 signupForm.addEventListener("submit", signupFormHandler);
