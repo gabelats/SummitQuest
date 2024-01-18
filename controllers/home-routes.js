@@ -52,4 +52,19 @@ router.get("/profile", (req, res) => {
   }
 });
 
+router.get("/peaks/:id", async (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect("/login");
+  }
+  try {
+    const peakData = await Peaks.findByPk(req.params.id);
+    const peaks = await peakData.map((peaks) => peaks.get({ plain: true }));
+    res.render("peaks", {
+      peaks,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
