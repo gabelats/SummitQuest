@@ -1,0 +1,148 @@
+<nav class="d-flex flex-row align-items-center">
+  <h1 class="fw-bold p-3">SummitQuest</h1>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/dashboard">Dashboard</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="logout">LogOut</a>
+    </li>
+  </ul>
+</nav>
+<div
+  class="d-flex w-100 vh-100 justify-content-center align-items-top container"
+>
+  <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
+    <div class="container flex-column d-flex">
+      <div class="container d-flex flex-row custom-border mt-2">
+        <div class="col-6 m-2">
+          <img
+            class="card-img-top border border-black rounded-circle"
+            src="https://media.istockphoto.com/id/519078727/photo/male-silhouette-as-avatar-profile-picture.webp?b=1&s=170667a&w=0&k=20&c=JzPsyMEFcdQp2UlFqLVeuOaj2bOpteXUWFR9FJzTnBM="
+            alt="..."
+          />
+        </div>
+        <div class="col-6 card-body align-items-end">
+          <h2>{{user.username}}</h2>
+          <h5>Member Since:</h5>
+          <p>{{format_date user.createdAt}}</p>
+        </div>
+      </div>
+      <div class="card-body mt-2 custom-border">
+        <h5>User bio</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Reiciendis quidem a voluptate dolor labore dolorem
+          ipsam accusamus, eligendi magnam exercitationem rem quaerat eius
+          commodi dolorum suscipit numquam praesentium corporis dolores.
+        </p>
+        <h5>Featured Summit</h5>
+        <div class="image-container">
+          <img
+            class="img-fluid"
+            src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+          />
+
+          <p class="overlay">{{user.peaks.peak_name}} Climbed on {{date}}</p>
+        </div>
+      </div>
+      <div class="card-body custom-border mt-2">
+        <h5>My Summit Quest Progress:</h5>
+        <ol class="list-group m-2">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Peaks Completed </div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{user.completed_peaks.length}}</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Elevation Climbed</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">Elevation</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Total Peaks Attempted</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">#/58</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Most Difficult Summit</div>
+            </div>
+            <span class="badge bg-primary rounded-pill">Peak #1</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </aside>
+  <section class="d-flex align-items-end flex-column">
+    <section>
+      <div class="d-flex flex-row custom-border mt-2 container">
+        <div class="m-2 col-6">
+          <h3 class="card-title">{{user.username}}'s Summit Queue</h3>
+          <h5>Next Summits:</h5>
+
+          <div class="image-container">
+            <img
+              class="img-fluid"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            />
+
+            <p class="overlay">Peak #1</p>
+          </div>
+        </div>
+        <div class="col-6 mt-2 mb-2 container">
+          <!-- Can use a partial to dynamically create these in handlebars -->
+          <ol class="list-group list-group-numbered">
+            {{#each liWishlist}}
+              {{>partials/liWishlist this}}
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </section>
+    <article>
+      <div class="d-flex flex-row custom-border mt-2 container">
+        <div class="m-2 col-6">
+          <h3 class="card-title">{{user.username}}'s Completed Peaks</h3>
+          <h5>Most Recent Summit:</h5>
+
+          <div class="image-container">
+            <img
+              class="img-fluid"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            />
+
+            <p class="overlay">Peak #1</p>
+          </div>
+        </div>
+        <div class="col-6 mt-2 mb-2 container">
+          <!-- Can use a partial to dynamically create these in handlebars -->
+          <ol class="list-group list-group-numbered">
+            {{#each liCompleted}}
+              {{>partials/liCompleted this}}
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </article>
+  </section>
+</div>
+<script src="/js/profile.js"></script>
+<script src="/js/logout.js"></script>
