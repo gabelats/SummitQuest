@@ -37,11 +37,8 @@
           <div class="m-2 col-6">
             <h3>Featured Peak</h3>
             <div class="image-container">
-              <img
-                class="img-fluid"
-                src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
-              />
-              <p class="overlay">{{allPeaks.peak_name}}</p>
+              <img class="img-fluid" src="{{featurePeaks.peak_image_route}}" />
+              <p class="overlay">{{featurePeaks.peak_name}}</p>
             </div>
           </div>
           <div class="col-6 mt-2 mb-2 container">
@@ -50,25 +47,25 @@
                 class="list-group-item d-flex justify-content-between align-items-center"
               >
                 Location:
-                {{allPeaks.location}}
+                {{featurePeaks.location}}
               </li>
               <li
                 class="list-group-item d-flex justify-content-between align-items-center"
               >
                 Elevation:
-                {{allPeaks.elevation}}
+                {{featurePeaks.elevation}}
               </li>
               <li
                 class="list-group-item d-flex justify-content-between align-items-center"
               >
                 Difficulty:
-                {{allPeaks.difficulty}}
+                {{featurePeaks.difficulty}}
               </li>
               <li
                 class="list-group-item d-flex justify-content-between align-items-center"
               >
                 Do you need a permit:
-                {{allPeaks.permit_required}}
+                {{featurePeaks.permit_required}}
               </li>
             </ol>
           </div>

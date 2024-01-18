@@ -19,10 +19,15 @@ router.get("/dashboard", withAuth, async (req, res) => {
 
     const peakList = await Peaks.findAll();
     const allPeaks = await peakList.map((peaks) => peaks.get({ plain: true }));
+    const featurePeaks = await allPeaks[
+      Math.floor(Math.random() * allPeaks.length)
+    ];
+    console.log(featurePeaks);
 
     res.render("dashboard", {
       hikes,
       allPeaks,
+      featurePeaks,
     });
   } catch (err) {
     console.log(err);
