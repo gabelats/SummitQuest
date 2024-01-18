@@ -1,4 +1,4 @@
-<body class="bg-light">
+<main class="bg-light">
 <nav class="d-flex flex-row align-items-center">
   <h1 class="fw-bold p-3">SummitQuest</h1>
   <ul class="nav">
@@ -14,7 +14,7 @@
   </ul>
 </nav>
 <div
-  class="d-flex w-100 vh-100 justify-content-center align-items-top container"
+  class="d-flex w-100 vh-100 justify-content-center align-items-top"
 >
   <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
     <div class="container col lg-4 flex-column d-flex">
@@ -26,7 +26,7 @@
             alt="..."
           />
         </div>
-        <div class="col-6 card-body align-items-end">
+        <div class="col-6 align-items-end">
           <h2>{{user.username}}</h2>
           <h5>Member Since:</h5>
           <p>{{format_date user.createdAt}}</p>
@@ -118,10 +118,10 @@
         </div>
       </div>
       <div class="container custom-border col-12 mt-2">
-        <h5 class="m-2">Add a Mountain to your Quest:</h5>
+        <h3 class="m-2">Add a Mountain to your Quest:</h3>
         <form action="#" id="questForm">
           <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown2">Peak Name</label>
+            <label style="font-weight: bolder;" for="dropdown2">Peak Name</label>
             <select id="dropdown2" name="option2" class="form-control">
               {{#each allPeaks}}
                 <option value={{id}}>{{peak_name}}</option>
@@ -164,10 +164,10 @@
         </div>
       </div>
       <div class="container col-12 custom-border mt-2">
-        <h5 class="m-2">Record a SummitQuest:</h5>
+        <h3 class="m-2">Record a SummitQuest:</h3>
         <form action="#" id="completeQuest">
           <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown2">Peak Name</label>
+            <label style="font-weight: bolder;" for="dropdown2">Peak Name</label>
             <select id="dropdown2_2" name="option2" class="form-control">
               {{#each allPeaks}}
                 <option value={{id}}>{{peak_name}}</option>
@@ -176,12 +176,12 @@
           </div>
 
           <div class="form-group m-2">
-            <label class="fw-bold" for="date">Date</label>
+            <label style="font-weight: bolder;" for="date">Date</label>
             <input type="date" id="date" name="date" class="form-control" />
           </div>
 
           <div class="form-group m-2">
-            <label class="fw-bold" for="comment">Comment</label>
+            <label style="font-weight: bolder;" for="comment">Comment</label>
             <textarea
               id="comment"
               name="comment"
@@ -191,7 +191,7 @@
           </div>
 
           <div class="form-group m-2">
-            <label class="fw-bold" for="time_taken">Time taken:</label>
+            <label style="font-weight: bolder;" for="time_taken">Time taken:</label>
             <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
         <option selected>Hours</option>
         <option value="1">1</option>
@@ -209,7 +209,7 @@
       </select>
           </div>
           <div class="form-group m-2">
-            <label class="fw-bold" for="completed">Completed</label>
+            <label style="font-weight: bolder;" for="completed">Completed</label>
             <input type="checkbox" id="completed" value="true" name="completed" />
           </div>
           <div class="form-group m-2">
@@ -225,9 +225,5 @@
   </section>
 </div>
 <script src="/js/profile.js"></script>
-<<<<<<< HEAD
-
-</body>
-=======
 <script src="/js/logout.js"></script>
->>>>>>> main
+</main>
