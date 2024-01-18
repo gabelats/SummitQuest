@@ -168,7 +168,7 @@
         <form action="#" id="completeQuest">
           <div class="form-group m-2">
             <label class="fw-bold" for="dropdown2">Peak Name</label>
-            <select id="dropdown2" name="option2" class="form-control">
+            <select id="dropdown2_2" name="option2" class="form-control">
               {{#each allPeaks}}
                 <option value={{id}}>{{peak_name}}</option>
               {{/each}}
@@ -191,17 +191,26 @@
           </div>
 
           <div class="form-group m-2">
-            <label class="fw-bold" for="weather">Weather</label>
-            <textarea
-              id="weather"
-              name="weather"
-              rows="4"
-              class="form-control"
-            ></textarea>
+            <label class="fw-bold" for="time_taken">Time taken:</label>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+        <option selected>Hours</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12+</option>
+      </select>
           </div>
           <div class="form-group m-2">
             <label class="fw-bold" for="completed">Completed</label>
-            <input type="checkbox" id="completed" name="completed" />
+            <input type="checkbox" id="completed" value="true" name="completed" />
           </div>
           <div class="form-group m-2">
             <input
@@ -216,5 +225,9 @@
   </section>
 </div>
 <script src="/js/profile.js"></script>
+<<<<<<< HEAD
 
 </body>
+=======
+<script src="/js/logout.js"></script>
+>>>>>>> main

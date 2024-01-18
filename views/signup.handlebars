@@ -9,10 +9,10 @@
       <div class="col-md-6 col-lg-4">
         <div class="login-wrap p-0">
           <h3 class="mb-4 text-center">Sign Up to Begin Your Quest</h3>
-          <form action="#" class="signin-form" id="signUpForm">
+          <form action="#" class="signup-form" id="signup-form">
             <div class="form-group">
               <input
-                id="username-field"
+                id="username-signup"
                 type="text"
                 class="form-control"
                 placeholder="Username"
@@ -21,7 +21,7 @@
             </div>
             <div class="form-group field-container">
               <input
-                id="password-field"
+                id="password-signup"
                 type="password"
                 class="form-control"
                 placeholder="Password"
@@ -29,7 +29,7 @@
               />
               <div class="form-group" style="margin-top: 15px">
                 <input
-                  id="email-field"
+                  id="email-signup"
                   type="email"
                   class="form-control"
                   placeholder="Email"
@@ -61,7 +61,7 @@
   <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
   ></script>
-  <script src="js/signup.js"></script>
+  <script src="/js/signup.js"></script>
   <script>
     const emailjsUserID = "{{EMAILJS_PUBLIC_KEY}}"; const emailjsTemplateID = "{{TEMPLATE_ID}}";
     const emailjsServiceID = "{{SERVICE_ID}}"
