@@ -16,6 +16,22 @@ const formData = {
   email: document.querySelector("#email-signup").value.trim(),
 };
 
+async function sendEmail(data) {
+  console.log(data);
+  await emailjs
+    .send("service_wp98bib", "template_p4gya6z", data, "g6a2kNRjvcDHS5gJl")
+
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
+  return;
+}
+
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -28,18 +44,7 @@ const signupFormHandler = async (event) => {
     email,
   };
   console.log(userObj);
-  emailjs
-    .send("service_wp98bib", "template_g8ln0cl", userObj, "g6a2kNRjvcDHS5gJl")
-
-    .then(
-      function (response) {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      function (error) {
-        console.log("FAILED...", error);
-      }
-    );
-
+  sendEmail(userObj);
   if (username && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",
