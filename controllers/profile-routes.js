@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const { Users, Hikes, Peaks } = require("../models");
-
+const withAuth = require("../utils/auth");
 //http://localhost:3001/profile/:username
-router.get("/:username", async (req, res) => {
+router.get("/:username", withAuth, async (req, res) => {
   try {
     const userByName = await Users.findOne({
       where: {
