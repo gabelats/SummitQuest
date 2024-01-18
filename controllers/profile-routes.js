@@ -40,9 +40,32 @@ router.get("/:username", withAuth, async (req, res) => {
       res.render("other-profile", {
         user,
         allPeaks,
+        peakQueue,
+        completedPeaks,
         logged_in: req.session.logged_in,
       });
     }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+router.get("/hike/:id", withAuth, async (req, res) => {
+  try {
+    const hikeData = await Hikes.findOne({
+      where: {
+        id: req.params.id,
+      },
+      include: Peaks,
+    });
+
+    const hike = await hikeData.get({ plain: true });
+    console.log(hike);
+    res.render("userhike", {
+      hike,
+      logged_in: req.session.logged_in,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);

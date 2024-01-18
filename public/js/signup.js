@@ -14,30 +14,30 @@ document.querySelectorAll(".toggle-password").forEach(function (toggle) {
 
 var formData = {};
 
-// $(".signin-Form").on("submit", function (event) {
-//   event.preventDefault();
+$(".signin-Form").on("submit", function (event) {
+  event.preventDefault();
 
-//   formData.username = document.getElementById("username-field").value;
-//   formData.email = document.getElementById("email-field").value;
+  formData.username = document.getElementById("username-signup").value;
+  formData.email = document.getElementById("email-signup").value;
 
-//   $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-//     type: "POST",
-//     data: {
-//       template_id: EMAILJS_PUBLIC_KEY,
-//       user_id: TEMPLATE_ID,
-//       service_id: SERVICE_ID,
-//       template_params: formData,
-//     },
-//     contentType: false,
-//     processData: false,
-//   })
-//     .done(function () {
-//       alert("Your mail is sent!");
-//     })
-//     .fail(function (error) {
-//       alert("Oops... " + JSON.stringify(error));
-//     });
-// });
+  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
+    type: "POST",
+    data: {
+      template_id: EMAILJS_PUBLIC_KEY,
+      user_id: TEMPLATE_ID,
+      service_id: SERVICE_ID,
+      template_params: formData,
+    },
+    contentType: false,
+    processData: false,
+  })
+    .done(function () {
+      alert("Your mail is sent!");
+    })
+    .fail(function (error) {
+      alert("Oops... " + JSON.stringify(error));
+    });
+});
 //POST https://api.emailjs.com/api/v1.0/email/send-form
 const signupFormHandler = async (event) => {
   event.preventDefault();
