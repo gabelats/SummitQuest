@@ -6,11 +6,11 @@ const withAuth = require("../../utils/auth");
 //http://localhost:3001/api/hikes
 router.post("/", withAuth, async (req, res) => {
   try {
-    const userId = req.session.user_id;
+    const userLogId = req.session.user_id;
     console.log(userId);
     const newHike = await Hikes.create({
-      user_id: userId,
-      peak_id: req.body.peak_id,
+      userId: userLogId,
+      peakId: req.body.peak_id,
       time_taken: req.body.time_taken,
       date: req.body.date,
       completed: req.body.completed,

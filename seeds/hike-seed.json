@@ -12,5 +12,19 @@
     "time_taken": "4",
     "completed": false,
     "journal": "I liked this climb very much more than the other one"
+  },
+  {
+    "userId": 3,
+    "peakId": 5,
+    "time_taken": "6",
+    "completed": false,
+    "journal": "I liked this a bit"
+  },
+  {
+    "userId": 3,
+    "peakId": 10,
+    "time_taken": "3",
+    "completed": true,
+    "journal": "I liked this"
   }
 ]
