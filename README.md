@@ -20,4 +20,4 @@ On the dashboard you can find a list of all 58 of the state's 14ers along with i
 
 Github Repo: https://github.com/gabelats/SummitQuest
 
-Deployed site:
+Deployed site: https://summitquest-babysteps-2f40964da154.herokuapp.com/
