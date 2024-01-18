@@ -10,14 +10,15 @@ body.login-page {
   height: 50px;
   padding-left: 20px;
   padding-right: 40px;
-  color: white;
+  color: black;
   border-width: 1px;
   border-style: solid;
-  border-color: transparent;
+  /* border-color: transparent; */
   border-image: initial;
   background: rgba(255, 255, 255, 0.08);
   border-radius: 40px;
   transition: all 0.3s ease 0s;
+  font-weight: bolder;
 }
 
 .login-wrap {
