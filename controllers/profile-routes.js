@@ -20,9 +20,11 @@ router.get("/:username", withAuth, async (req, res) => {
     const userPeaks = user.peaks;
     let completedPeaks = [];
     let peakQueue = [];
+    let totalEl = 0;
     for (i = 0; i < userPeaks.length; i++) {
       if (userPeaks[i].hikes.completed) {
         completedPeaks.push(userPeaks[i]);
+        totalEl += userPeaks[i].elevation;
       } else {
         peakQueue.push(userPeaks[i]);
       }
@@ -34,6 +36,7 @@ router.get("/:username", withAuth, async (req, res) => {
         allPeaks,
         peakQueue,
         completedPeaks,
+        totalEl,
         logged_in: req.session.logged_in,
       });
     } else {
