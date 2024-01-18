@@ -10,14 +10,14 @@
     "userId": 2,
     "peakId": 2,
     "time_taken": "4",
-    "completed": false,
+    "completed": true,
     "journal": "I liked this climb very much more than the other one"
   },
   {
     "userId": 3,
     "peakId": 5,
     "time_taken": "6",
-    "completed": false,
+    "completed": true,
     "journal": "I liked this a bit"
   },
   {
