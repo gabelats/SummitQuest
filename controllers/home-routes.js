@@ -27,11 +27,17 @@ router.get("/dashboard", withAuth, async (req, res) => {
     console.log(featurePeaks);
 
     console.log(hikes);
-
+    let completedHikes = [];
+    for (i = 0; i < hikes.length; i++) {
+      if (hikes[i].completed) {
+        completedHikes.push(hikes[i]);
+      }
+    }
     res.render("dashboard", {
       hikes,
       allPeaks,
       featurePeaks,
+      completedHikes,
     });
   } catch (err) {
     console.log(err);
