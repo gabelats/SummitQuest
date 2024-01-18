@@ -1,4 +1,3 @@
-<body class="bg-light">
 <nav class="d-flex flex-row align-items-center">
   <h1 class="fw-bold p-3">SummitQuest</h1>
   <ul class="nav">
@@ -17,8 +16,8 @@
   class="d-flex w-100 vh-100 justify-content-center align-items-top container"
 >
   <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
-    <div class="container col lg-4 flex-column d-flex">
-      <div class="container p-2 d-flex flex-row custom-border mt-2">
+    <div class="container flex-column d-flex">
+      <div class="container d-flex flex-row custom-border mt-2">
         <div class="col-6 m-2">
           <img
             class="card-img-top border border-black rounded-circle"
@@ -32,7 +31,7 @@
           <p>{{format_date user.createdAt}}</p>
         </div>
       </div>
-      <div class="p-2 mt-2 custom-border">
+      <div class="card-body mt-2 custom-border">
         <h5>User bio</h5>
         <p class="card-text">
           Some quick example text to build on the card title and make up the
@@ -45,13 +44,13 @@
         <div class="image-container">
           <img
             class="img-fluid"
-            src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
           />
 
           <p class="overlay">{{user.peaks.peak_name}} Climbed on {{date}}</p>
         </div>
       </div>
-      <div class="p-2 custom-border mt-2">
+      <div class="card-body custom-border mt-2">
         <h5>My Summit Quest Progress:</h5>
         <ol class="list-group m-2">
           <li
@@ -102,7 +101,7 @@
           <div class="image-container">
             <img
               class="img-fluid"
-              src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
             />
 
             <p class="overlay">Peak #1</p>
@@ -117,27 +116,6 @@
           </ol>
         </div>
       </div>
-      <div class="container custom-border col-12 mt-2">
-        <h5 class="m-2">Add a Mountain to your Quest:</h5>
-        <form action="#" id="questForm">
-          <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown2">Peak Name</label>
-            <select id="dropdown2" name="option2" class="form-control">
-              {{#each allPeaks}}
-                <option value={{id}}>{{peak_name}}</option>
-              {{/each}}
-            </select>
-          </div>
-
-          <div class="form-group m-2">
-            <input
-              type="submit"
-              value="Submit"
-              class="form-control btn btn-primary submit px-3"
-            />
-          </div>
-        </form>
-      </div>
     </section>
     <article>
       <div class="d-flex flex-row custom-border mt-2 container">
@@ -148,7 +126,7 @@
           <div class="image-container">
             <img
               class="img-fluid"
-              src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
             />
 
             <p class="overlay">Peak #1</p>
@@ -163,71 +141,8 @@
           </ol>
         </div>
       </div>
-      <div class="container col-12 custom-border mt-2">
-        <h5 class="m-2">Record a SummitQuest:</h5>
-        <form action="#" id="completeQuest">
-          <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown2">Peak Name</label>
-            <select id="dropdown2_2" name="option2" class="form-control">
-              {{#each allPeaks}}
-                <option value={{id}}>{{peak_name}}</option>
-              {{/each}}
-            </select>
-          </div>
-
-          <div class="form-group m-2">
-            <label class="fw-bold" for="date">Date</label>
-            <input type="date" id="date" name="date" class="form-control" />
-          </div>
-
-          <div class="form-group m-2">
-            <label class="fw-bold" for="comment">Comment</label>
-            <textarea
-              id="comment"
-              name="comment"
-              rows="4"
-              class="form-control"
-            ></textarea>
-          </div>
-
-          <div class="form-group m-2">
-            <label class="fw-bold" for="time_taken">Time taken:</label>
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-        <option selected>Hours</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12+</option>
-      </select>
-          </div>
-          <div class="form-group m-2">
-            <label class="fw-bold" for="completed">Completed</label>
-            <input type="checkbox" id="completed" value="true" name="completed" />
-          </div>
-          <div class="form-group m-2">
-            <input
-              type="submit"
-              value="Submit"
-              class="form-control btn btn-primary submit px-3"
-            />
-          </div>
-        </form>
-      </div>
     </article>
   </section>
 </div>
 <script src="/js/profile.js"></script>
-<<<<<<< HEAD
-
-</body>
-=======
 <script src="/js/logout.js"></script>
->>>>>>> main

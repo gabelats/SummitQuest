@@ -7,10 +7,9 @@ const withAuth = require("../../utils/auth");
 router.post("/", withAuth, async (req, res) => {
   try {
     const userLogId = req.session.user_id;
-    console.log(userId);
     const newHike = await Hikes.create({
       userId: userLogId,
-      peakId: req.body.peak_id,
+      peakId: req.body.peakId,
       time_taken: req.body.time_taken,
       date: req.body.date,
       completed: req.body.completed,

@@ -5,19 +5,19 @@ const addQuestHandler = async (event) => {
   event.preventDefault();
 
   const peakName = document.querySelector("#dropdown2");
-  const peakId = peakName.value;
+  const peak_id = peakName.value;
   const bodyObj = {
-    peak_id: peakId,
+    peakId: peak_id,
     completed: false,
   };
   if (bodyObj) {
-    const response = await fetch("/api/hikes/post", {
+    const response = await fetch("/api/hikes/", {
       method: "POST",
       body: JSON.stringify(bodyObj),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      return;
+      alert("quest saved");
     } else {
       alert(response.statusText);
     }
@@ -27,26 +27,29 @@ const addQuestHandler = async (event) => {
 const completeQuestHandler = async (event) => {
   event.preventDefault();
 
-  const peakName = document.querySelector("#dropdown2");
-  const peakId = peakName.value;
+  const peakName = document.querySelector("#dropdown2_2");
+  const peak_id = peakName.value;
   const dateInput = document.querySelector("#date").value;
   const journalInput = document.querySelector("#comment").value;
-  const completedCheck = document.querySelector("#completed").value;
+  const completedCheck = document.querySelector("#completed").checked;
+  const timeCheck = document.querySelector("#inlineFormCustomSelect");
+  const time_chosen = timeCheck.value;
   const bodyObj = {
-    peak_id: peakId,
+    peakId: peak_id,
     completed: completedCheck,
     date: dateInput,
     journal: journalInput,
+    time_taken: time_chosen,
   };
-
+  console.log(bodyObj);
   if (bodyObj) {
-    const response = await fetch("/api/hikes/post", {
+    const response = await fetch("/api/hikes/", {
       method: "POST",
       body: JSON.stringify(bodyObj),
       headers: { "Content-Type": "application/json" },
     });
     if (response.ok) {
-      return;
+      alert("quest completed!");
     } else {
       alert(response.statusText);
     }

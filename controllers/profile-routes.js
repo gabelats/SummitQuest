@@ -15,11 +15,19 @@ router.get("/:username", withAuth, async (req, res) => {
     const peakList = await Peaks.findAll();
     const allPeaks = await peakList.map((peaks) => peaks.get({ plain: true }));
 
-    res.render("profile", {
-      user,
-      allPeaks,
-      logged_in: req.session.logged_in,
-    });
+    if (userByName.username == req.session.username) {
+      res.render("profile", {
+        user,
+        allPeaks,
+        logged_in: req.session.logged_in,
+      });
+    } else {
+      res.render("other-profile", {
+        user,
+        allPeaks,
+        logged_in: req.session.logged_in,
+      });
+    }
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
