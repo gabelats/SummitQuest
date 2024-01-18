@@ -71,6 +71,10 @@ body.login-page {
   overflow: hidden;
 }
 
+.peak-list {
+  margin-left: 5%;
+  margin-right: 5%;
+}
 .image-container img {
   display: block;
   width: 100%;
