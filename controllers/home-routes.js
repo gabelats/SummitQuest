@@ -33,11 +33,16 @@ router.get("/dashboard", withAuth, async (req, res) => {
         completedHikes.push(hikes[i]);
       }
     }
+    let recentHikes = [];
+    for (i = completedHikes.length - 3; i < completedHikes.length; i++) {
+      recentHikes.push(completedHikes[i]);
+    }
+
     res.render("dashboard", {
       hikes,
       allPeaks,
       featurePeaks,
-      completedHikes,
+      recentHikes,
     });
   } catch (err) {
     console.log(err);
