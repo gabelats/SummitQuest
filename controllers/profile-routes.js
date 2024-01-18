@@ -28,11 +28,6 @@ router.get("/:username", withAuth, async (req, res) => {
         logged_in: req.session.logged_in,
       });
     }
-    res.render("profile", {
-      user,
-      allPeaks,
-      logged_in: req.session.logged_in,
-    });
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
