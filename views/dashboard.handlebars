@@ -2,55 +2,31 @@
   <h1 class="fw-bold p-3">SummitQuest</h1>
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Profile</a>
+      <a class="nav-link active" aria-current="page" href="/profile">Profile</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Dashboard</a>
+      <a class="nav-link" href="/dashboard">Dashboard</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">LogOut</a>
+      <a class="nav-link" href="#" id="logout">LogOut</a>
     </li>
   </ul>
 </nav>
 <div class="d-flex flex-row container-fluid">
   <aside class="d-flex col-lg-4 col-md-6 col-sm-12 justify-content-evenly">
     <div class="custom-border w-75 p-3">
-      <div
-        class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
-      >
-        <h6>{{users.username}}</h6>
-        <p>{{peaks.peak_name}}</p>
-        <p>{{format_date completedAt}}</p>
-        <p>Weather Conditions</p>
-        <p>{{time_taken}}</p>
-      </div>
-      <div
-        class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
-      >
-        <h6>{{users.username}}</h6>
-        <p>{{peaks.peak_name}}</p>
-        <p>{{format_date completedAt}}</p>
-        <p>Weather Conditions</p>
-        <p>{{time_taken}}</p>
-      </div>
-      <div
-        class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
-      >
-        <h6>{{users.username}}</h6>
-        <p>{{peaks.peak_name}}</p>
-        <p>{{format_date completedAt}}</p>
-        <p>Weather Conditions</p>
-        <p>{{time_taken}}</p>
-      </div>
-      <div
-        class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
-      >
-        <h6>{{users.username}}</h6>
-        <p>{{peaks.peak_name}}</p>
-        <p>{{format_date completedAt}}</p>
-        <p>Weather Conditions</p>
-        <p>{{time_taken}}</p>
-      </div>
+      {{#each hikes}}
+        <div
+          class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
+        >
+          <h6>{{users.username}}</h6>
+          <p>{{peaks.peak_name}}</p>
+          {{!-- <p>{{format_date completedAt}}</p> --}}
+          <p>Weather Conditions</p>
+          <p>{{time_taken}} hours</p>
+        </div>
+      {{/each}}
+
     </div>
   </aside>
   <div class="col-lg-8 col-md-6 col-sm-12 vh-100 custom-border">
@@ -65,7 +41,7 @@
                 class="img-fluid"
                 src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
               />
-              <p class="overlay">{{peaks.peak_name}}</p>
+              <p class="overlay">{{allPeaks.peak_name}}</p>
             </div>
           </div>
           <div class="col-6 mt-2 mb-2 container">
@@ -101,67 +77,9 @@
     </section>
     <div class="container d-flex">
       <section class="d-flex flex-wrap justify-content-evenly">
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
-        <h6>{{peaks.peak_name}}</h6>
+        {{#each allPeaks}}
+          <h6 class="peak-list">•{{peak_name}} </h6>
+        {{/each}}
       </section>
     </div>
   </div>

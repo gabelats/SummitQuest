@@ -39,24 +39,28 @@ const signupFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector("#username-field").value.trim();
-  const email = document.querySelector("#email-field").value.trim();
-  const password = document.querySelector("#password-field").value.trim();
-
+  const emailVal = document.querySelector("#email-field").value.trim();
+  const passwordVal = document.querySelector("#password-field").value.trim();
+  const bodyObj = {
+    username: name,
+    email: emailVal,
+    password: passwordVal,
+  };
   if (name && email && password) {
     const response = await fetch("/api/users", {
       method: "POST",
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify(bodyObj),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace(`profile/${req.session.username}`);
     } else {
-      alert(response.statusText);
+      console.log(response.statusText);
     }
   }
 };
 
-const signupForm = document.querySelector(".signin-form");
+const signupForm = document.querySelector("#signUpForm");
 
 signupForm.addEventListener("submit", signupFormHandler);

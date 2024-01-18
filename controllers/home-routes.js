@@ -10,24 +10,19 @@ router.get("/", async (req, res) => {
     res.redirect(`profile/${req.session.username}`);
   }
 });
-//http://localhost:3001/peaks/{id passed/selected}
-router.get("/peaks/:id", async (req, res) => {
+
+//http://localhost:3001/dashboard
+router.get("/dashboard", async (req, res) => {
   try {
-    const peakData = await Peaks.findByPk(req.params.id, {
-      include: [
-        {
-          model: Users,
-          attributes: ["username"],
-          through: Hikes,
-        },
-      ],
-    });
+    const hikesData = await Hikes.findAll();
+    const hikes = await hikesData.map((hike) => hike.get({ plain: true }));
 
-    const peaks = peakData.get({ plain: true });
+    const peakList = await Peaks.findAll();
+    const allPeaks = await peakList.map((peaks) => peaks.get({ plain: true }));
 
-    res.render("journal", {
-      ...journal,
-      logged_in: req.session.logged_in,
+    res.render("dashboard", {
+      hikes,
+      allPeaks,
     });
   } catch (err) {
     console.log(err);
@@ -53,9 +48,7 @@ router.get("/profile", (req, res) => {
     res.redirect("/login");
   }
   if (req.session.logged_in) {
-    res.render("profile", {
-      logged_in: req.session.logged_in,
-    });
+    res.redirect(`profile/${req.session.username}`);
   }
 });
 
