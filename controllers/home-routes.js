@@ -14,11 +14,15 @@ router.get("/", async (req, res) => {
 //http://localhost:3001/dashboard
 router.get("/dashboard", withAuth, async (req, res) => {
   try {
-    const hikesData = await Hikes.findAll();
+    const hikesData = await Hikes.findAll({
+      include: [Peaks, Users],
+    });
     const hikes = await hikesData.map((hike) => hike.get({ plain: true }));
 
     const peakList = await Peaks.findAll();
     const allPeaks = await peakList.map((peaks) => peaks.get({ plain: true }));
+
+    console.log(hikes);
 
     res.render("dashboard", {
       hikes,
