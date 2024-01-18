@@ -1,3 +1,4 @@
+<body class="bg-light">
 <nav class="d-flex flex-row align-items-center">
   <h1 class="fw-bold p-3">SummitQuest</h1>
   <ul class="nav">
@@ -16,8 +17,8 @@
   class="d-flex w-100 vh-100 justify-content-center align-items-top container"
 >
   <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
-    <div class="container flex-column d-flex">
-      <div class="container d-flex flex-row custom-border mt-2">
+    <div class="container col lg-4 flex-column d-flex">
+      <div class="container p-2 d-flex flex-row custom-border mt-2">
         <div class="col-6 m-2">
           <img
             class="card-img-top border border-black rounded-circle"
@@ -31,7 +32,7 @@
           <p>{{format_date user.createdAt}}</p>
         </div>
       </div>
-      <div class="card-body mt-2 custom-border">
+      <div class="p-2 mt-2 custom-border">
         <h5>User bio</h5>
         <p class="card-text">
           Some quick example text to build on the card title and make up the
@@ -44,13 +45,13 @@
         <div class="image-container">
           <img
             class="img-fluid"
-            src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+            src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
           />
 
           <p class="overlay">{{user.peaks.peak_name}} Climbed on {{date}}</p>
         </div>
       </div>
-      <div class="card-body custom-border mt-2">
+      <div class="p-2 custom-border mt-2">
         <h5>My Summit Quest Progress:</h5>
         <ol class="list-group m-2">
           <li
@@ -101,7 +102,7 @@
           <div class="image-container">
             <img
               class="img-fluid"
-              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+              src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
             />
 
             <p class="overlay">Peak #1</p>
@@ -119,21 +120,6 @@
       <div class="container custom-border col-12 mt-2">
         <h5 class="m-2">Add a Mountain to your Quest:</h5>
         <form action="#" id="questForm">
-          <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown1">Mountain Range</label>
-            <select id="dropdown1" name="option1" class="form-control">
-
-              <option value="Sawatch_Range">Sawatch Range</option>
-              <option value="Sangre_de_Cristo">Sangre de Cristo</option>
-              <option
-                value="San_Juan_Mountains
-                    "
-              >
-                San Juan Mountains
-              </option>
-            </select>
-          </div>
-
           <div class="form-group m-2">
             <label class="fw-bold" for="dropdown2">Peak Name</label>
             <select id="dropdown2" name="option2" class="form-control">
@@ -162,7 +148,7 @@
           <div class="image-container">
             <img
               class="img-fluid"
-              src="../public/images/Eastern_Sangre_de_Cristo_14ers.jpg"
+              src="/images/Eastern_Sangre_de_Cristo_14ers.jpg"
             />
 
             <p class="overlay">Peak #1</p>
@@ -180,20 +166,6 @@
       <div class="container col-12 custom-border mt-2">
         <h5 class="m-2">Record a SummitQuest:</h5>
         <form action="#" id="completeQuest">
-          <div class="form-group m-2">
-            <label class="fw-bold" for="dropdown1">Mountain Range</label>
-            <select id="dropdown1" name="option1" class="form-control">
-              <option value="Sawatch_Range">Sawatch Range</option>
-              <option value="Sangre_de_Cristo">Sangre de Cristo</option>
-              <option
-                value="San_Juan_Mountains
-                  "
-              >
-                San Juan Mountains
-              </option>
-            </select>
-          </div>
-
           <div class="form-group m-2">
             <label class="fw-bold" for="dropdown2">Peak Name</label>
             <select id="dropdown2" name="option2" class="form-control">
@@ -243,4 +215,6 @@
     </article>
   </section>
 </div>
-<script src="../public/js/profile.js"></script>
+<script src="/js/profile.js"></script>
+
+</body>
