@@ -44,7 +44,10 @@
         class="list-group-item d-flex justify-content-between align-items-center"
       >
         Do you need a permit:
-        {{peaks.permit_required}}
+        {{#if featurePeaks.permit_required}}Yes
+        {{else}}
+          No
+        {{/if}}
       </li>
     </ol>
   </div>
