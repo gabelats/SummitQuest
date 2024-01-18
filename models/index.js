@@ -8,7 +8,6 @@ Users.hasMany(Hikes);
 Hikes.belongsTo(Users);
 Peaks.hasMany(Hikes);
 Hikes.belongsTo(Peaks);
-
 module.exports = {
   Users,
   Hikes,

@@ -13,18 +13,77 @@
   </ul>
 </nav>
 <div class="d-flex flex-row container-fluid">
-  <aside class="d-flex col-lg-4 col-md-6 col-sm-12 justify-content-evenly">
-    <div class="custom-border w-75 p-3">
+  <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
+    <div class="custom-border w-100 p-3">
+<h2 class="text-center">Community SummitQuests</h2>
       {{#each hikes}}
-        <div
-          class="container d-flex justify-content-evenly flex-wrap mt-2 custom-border"
-        >
-          <h6>{{users.username}}</h6>
-          <p>{{peaks.peak_name}}</p>
-          {{!-- <p>{{format_date completedAt}}</p> --}}
-          <p>Weather Conditions</p>
-          <p>{{time_taken}} hours</p>
-        </div>
+      <div class="mt-2 custom-border">
+
+      <ol class="list-group m-2">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Username: </div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{user.username}}</span>
+          </li>
+         <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Peak Name:</div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{peak.peak_name}}</span>
+          </li>
+           <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Attempt Date:</div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{date}}</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Completed:</div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{#if completed}}Yes
+            {{else}}
+              No
+            {{/if}}</span>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Journal Entry</div>
+            </div>
+            <textarea class="form-control mt-2" rows="2" readonly>{{journal}}</textarea>
+      </li>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Hours to Complete:</div>
+            </div>
+            <span
+              class="badge bg-primary rounded-pill"
+            >{{time_taken}}
+          </li>
+          </ol>
+</div>
       {{/each}}
 
     </div>
@@ -72,7 +131,8 @@
         </div>
       </section>
     </section>
-    <div class="container d-flex">
+    <div class="container d-flex flex-column">
+      <h1 class="text-center mb-4">Colorado 14ers List</h1>
       <section class="d-flex flex-wrap justify-content-between">
         {{#each allPeaks}}
           <div class="col-lg-3 col-md-4 col-sm-6">
