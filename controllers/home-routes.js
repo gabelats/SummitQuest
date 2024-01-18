@@ -58,7 +58,7 @@ router.get("/peaks/:id", async (req, res) => {
   }
   try {
     const peakData = await Peaks.findByPk(req.params.id);
-    const peaks = await peakData.map((peaks) => peaks.get({ plain: true }));
+    const peaks = await peakData.get({ plain: true });
     res.render("peaks", {
       peaks,
     });
