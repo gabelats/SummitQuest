@@ -11,40 +11,34 @@ document.querySelectorAll(".toggle-password").forEach(function (toggle) {
     }
   });
 });
+const formData = {
+  username: document.querySelector("#username-signup").value.trim(),
+  email: document.querySelector("#email-signup").value.trim(),
+};
 
-var formData = {};
-
-$(".signin-Form").on("submit", function (event) {
-  event.preventDefault();
-
-  formData.username = document.getElementById("username-signup").value;
-  formData.email = document.getElementById("email-signup").value;
-
-  $.ajax("https://api.emailjs.com/api/v1.0/email/send-form", {
-    type: "POST",
-    data: {
-      template_id: EMAILJS_PUBLIC_KEY,
-      user_id: TEMPLATE_ID,
-      service_id: SERVICE_ID,
-      template_params: formData,
-    },
-    contentType: false,
-    processData: false,
-  })
-    .done(function () {
-      alert("Your mail is sent!");
-    })
-    .fail(function (error) {
-      alert("Oops... " + JSON.stringify(error));
-    });
-});
-//POST https://api.emailjs.com/api/v1.0/email/send-form
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
   const username = document.querySelector("#username-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
+
+  const userObj = {
+    username,
+    email,
+  };
+  console.log(userObj);
+  emailjs
+    .send("service_wp98bib", "template_g8ln0cl", userObj, "g6a2kNRjvcDHS5gJl")
+
+    .then(
+      function (response) {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      function (error) {
+        console.log("FAILED...", error);
+      }
+    );
 
   if (username && email && password) {
     const response = await fetch("/api/users", {
@@ -60,7 +54,6 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
 const signupForm = document.querySelector("#signup-form");
 
 signupForm.addEventListener("submit", signupFormHandler);

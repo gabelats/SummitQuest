@@ -37,16 +37,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
-app.post("https://api.emailjs.com/api/v1.0/email/send-form", (req, res) => {
-  formData.append("service_id", process.env.SERVICE_ID);
-  formData.append("template_id", process.env.TEMPLATE_ID);
-  formData.append("user_id", process.env.EMAILJS_PUBLIC_KEY);
-});
-
-app.get("/email-js-config", (req, res) => {
-  res.json({ emailJSPublicKey });
-});
-
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
