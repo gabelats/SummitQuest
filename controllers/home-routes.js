@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Hikes, Peaks, Users } = require("../models");
-
+const withAuth = require("../utils/auth");
 //http://localhost:3001/
 router.get("/", async (req, res) => {
   if (!req.session.logged_in) {
@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
 });
 
 //http://localhost:3001/dashboard
-router.get("/dashboard", async (req, res) => {
+router.get("/dashboard", withAuth, async (req, res) => {
   try {
     const hikesData = await Hikes.findAll();
     const hikes = await hikesData.map((hike) => hike.get({ plain: true }));
