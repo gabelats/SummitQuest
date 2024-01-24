@@ -1,4 +1,4 @@
-<nav class="d-flex flex-row align-items-center">
+<nav class="d-flex flex-row align-items-center bg-light">
   <a href="/profile"><img class="logo" src="/images/logo.png" alt=""></a>
   <ul class="nav">
     <li class="nav-item">
@@ -12,12 +12,12 @@
     </li>
   </ul>
 </nav>
-<div class="d-flex flex-row container-fluid">
+<div class="d-flex flex-column flex-md-row container-fluid">
   <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
-    <div class="custom-border w-100 p-3">
+    <div class="w-100 p-3">
 <h2 class="text-center">Community SummitQuests</h2>
       {{#each recentHikes}}
-      <div class="mt-2 custom-border">
+      <div class="mt-2 custom-border bg-light">
 
       <ol class="list-group m-2">
           <li
@@ -88,11 +88,11 @@
 
     </div>
   </aside>
-  <div class="col-lg-8 col-md-6 col-sm-12 vh-105 custom-border">
-    <h1 class="mt-2 text-center">Peak Information</h1>
+  <div class="col-lg-8 col-md-6 col-sm-12 vh-105">
+    <h2 class="mt-2 text-center">Peak Information</h2>
     <section class="d-flex">
       <section class="d-flex align-items-end flex-column p-3 w-100">
-        <div class="d-flex flex-row mt-2 container custom-border align-items-center">
+        <div class="d-flex flex-row mt-2 container custom-border align-items-center bg-light">
           <div class="m-2 col-6">
             <h3>Featured Peak</h3>
             <div class="image-container">
@@ -101,6 +101,7 @@
             </div>
           </div>
           <div class="col-6 mt-2 mb-2 container">
+            <h3 class="text-center">{{featurePeaks.peak_name}}</h3>
             <ol class="">
               <li
                 class="list-group-item d-flex justify-content-between align-items-center"
@@ -134,9 +135,9 @@
         </div>
       </section>
     </section>
-    <div class="container d-flex flex-column">
+    <div class="container d-flex flex-column bg-light custom-border">
       <h1 class="text-center mb-4">Colorado 14ers List</h1>
-      <section class="d-flex flex-wrap justify-content-between custom-border p-2">
+      <section class="d-flex flex-wrap justify-content-between  p-2">
         {{#each allPeaks}}
           <div class="col-lg-3 col-md-4 col-sm-6">
             <h6 class="peak-list"><a
