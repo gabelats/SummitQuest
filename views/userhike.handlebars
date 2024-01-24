@@ -1,4 +1,4 @@
-<nav class="d-flex flex-row align-items-center">
+<nav class="d-flex flex-row align-items-center bg-light">
   <a href="/profile"><img class="logo" src="/images/logo.png" alt="" /></a>
   <ul class="nav">
     <li class="nav-item">
@@ -12,7 +12,9 @@
     </li>
   </ul>
 </nav>
-<div class="d-flex flex-row mt-2 container custom-border">
+<div
+  class="d-flex flex-row mt-2 container custom-border bg-light align-items-center"
+>
   <div class="m-2 col-6">
     <h3>Peak Information</h3>
     <div class="image-container">
@@ -49,7 +51,7 @@
     </ol>
   </div>
 </div>
-<div class="d-flex flex-row mt-2 container custom-border">
+<div class="d-flex flex-row mt-2 container custom-border bg-light">
   <div class="m-2 col-6">
     <h3> Hike information: </h3>
     <ol class="">
@@ -62,7 +64,7 @@
       <li
         class="list-group-item d-flex justify-content-between align-items-center"
       >
-        in
+       Time to Complete:
         {{hike.time_taken}}
         hours
       </li>
@@ -70,6 +72,8 @@
   </div>
   <div class="col-6 mt-2 mb-2 container">
     <h6>Journal:</h6>
-    <p>{{hike.journal}}</p>
-  </div>
+    
+            <textarea class="form-control mt-2" rows="4" readonly>{{hike.journal}}</textarea>
+      </li>
+
 </div>
