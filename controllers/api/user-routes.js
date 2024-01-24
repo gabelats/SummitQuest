@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Users, Hikes, Peaks } = require("../../models");
 const bcrypt = require("bcrypt");
+const withAuth = require("../../utils/auth");
 
 //http://localhost:3001/api/users/
 router.get("/", async (req, res) => {
@@ -56,10 +57,34 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.username = userData.username;
+      req.session.email = userData.email;
+      req.session.password = userData.password;
       req.session.logged_in = true;
 
       res.status(200).json({ user: userData, message: "login successful" });
     });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+});
+
+//http://localhost:3001/api/users/bio
+router.post("/bio", withAuth, async (req, res) => {
+  try {
+    const userLogId = req.session.user_id;
+    const userName = req.session.username;
+    const userEmail = req.session.email;
+    const userPassword = req.session.password;
+
+    const userBio = await Users.create({
+      userId: userLogId,
+      username: userName,
+      email: userEmail,
+      password: userPassword,
+      bio: req.body.bio,
+    });
+    res.status(200).json(userBio);
   } catch (error) {
     console.log(error);
     res.status(500).json(error);
