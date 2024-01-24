@@ -1,5 +1,5 @@
 <main class="bg-light">
-<nav class="d-flex flex-row align-items-center">
+<nav class="d-flex flex-row align-items-center ">
   <a href="/profile"><img class="logo" src="/images/logo.png" alt=""></a>
   <ul class="nav">
     <li class="nav-item">
@@ -14,19 +14,19 @@
   </ul>
 </nav>
 <div
-  class="d-flex w-100 vh-100 justify-content-center align-items-top"
+  class="d-flex flex-column-reverse flex-md-row vh-100 overflow-auto"
 >
-  <aside class="d-flex col-lg-4 col-md-6 col-sm-12">
-    <div class="container col lg-4 flex-column d-flex">
-      <div class="container p-2 d-flex flex-row custom-border mt-2">
-        <div class="col-6 m-2">
+  <aside class="order-sm-2 order-md-2">
+    <div class="container flex-column d-flex">
+      <div class="p-2 d-flex flex-lg-row custom-border mt-2 flex-column">
+        <div class="col-12 col-lg-6 card-body m-2">
           <img
             class="card-img-top border border-black rounded-circle"
             src="https://media.istockphoto.com/id/519078727/photo/male-silhouette-as-avatar-profile-picture.webp?b=1&s=170667a&w=0&k=20&c=JzPsyMEFcdQp2UlFqLVeuOaj2bOpteXUWFR9FJzTnBM="
             alt="..."
           />
         </div>
-        <div class="col-6 align-items-end">
+        <div class="col-12 col-lg-6 card-body align-items-center">
           <h2>{{user.username}}</h2>
           <h5>Member Since:</h5>
           <p>{{format_date user.createdAt}}</p>
@@ -92,7 +92,7 @@
       </div>
     </div>
   </aside>
-  <section class="d-flex align-items-end flex-column">
+  <section class="order-sm-1 order-md-2">
     <section>
       <div class="d-flex flex-row custom-border mt-2 container">
         <div class="m-2 col-6">
@@ -117,7 +117,7 @@
           </ol>
         </div>
       </div>
-      <div class="container custom-border col-12 mt-2">
+      <div class="container custom-border mt-2">
         <h3 class="m-2">Add a Mountain to your Quest:</h3>
         <form action="#" id="questForm">
           <div class="form-group m-2">
@@ -163,7 +163,7 @@
           </ol>
         </div>
       </div>
-      <div class="container col-12 custom-border mt-2">
+      <div class="container custom-border mt-2">
         <h3 class="m-2">Record a SummitQuest:</h3>
         <form action="#" id="completeQuest">
           <div class="form-group m-2">
