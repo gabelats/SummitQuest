@@ -1,5 +1,5 @@
-<main class="bg-light">
-<nav class="d-flex flex-row align-items-center ">
+
+<nav class="d-flex flex-row align-items-center bg-light">
   <a href="/profile"><img class="logo" src="/images/logo.png" alt=""></a>
   <ul class="nav">
     <li class="nav-item">
@@ -14,11 +14,11 @@
   </ul>
 </nav>
 <div
-  class="d-flex flex-column-reverse flex-md-row vh-100 overflow-auto"
+  class="d-flex flex-column-reverse flex-md-row vh-100 overflow-auto space-between"
 >
   <aside class="order-sm-2 order-md-2">
     <div class="container flex-column d-flex">
-      <div class="p-2 d-flex flex-lg-row custom-border mt-2 flex-column">
+      <div class="p-2 d-flex flex-lg-row custom-border mt-2 flex-column bg-light">
         <div class="col-12 col-lg-6 card-body m-2">
           <img
             class="card-img-top border border-black rounded-circle"
@@ -32,7 +32,7 @@
           <p>{{format_date user.createdAt}}</p>
         </div>
       </div>
-      <div class="p-2 mt-2 custom-border">
+      <div class="p-2 mt-2 custom-border bg-light">
         <h5>User bio</h5>
         <p class="card-text">
           Some quick example text to build on the card title and make up the
@@ -51,7 +51,7 @@
           <p class="overlay">{{user.peaks.peak_name}} Climbed on {{date}}</p>
         </div>
       </div>
-      <div class="p-2 custom-border mt-2">
+      <div class="p-2 custom-border mt-2 bg-light">
         <h5>My Summit Quest Progress:</h5>
         <ol class="list-group m-2">
           <li
@@ -94,7 +94,7 @@
   </aside>
   <section class="order-sm-1 order-md-2">
     <section>
-      <div class="d-flex flex-row custom-border mt-2 container">
+      <div class="d-flex flex-row custom-border mt-2 container bg-light">
         <div class="m-2 col-6">
           <h3 class="card-title">{{user.username}}'s Summit Queue</h3>
           <h5>Next Summits:</h5>
@@ -117,7 +117,7 @@
           </ol>
         </div>
       </div>
-      <div class="container custom-border mt-2">
+      <div class="container custom-border mt-2 bg-light">
         <h3 class="m-2">Add a Mountain to your Quest:</h3>
         <form action="#" id="questForm">
           <div class="form-group m-2">
@@ -140,7 +140,7 @@
       </div>
     </section>
     <article>
-      <div class="d-flex flex-row custom-border mt-2 container">
+      <div class="d-flex flex-row custom-border mt-2 container bg-light">
         <div class="m-2 col-6">
           <h3 class="card-title">{{user.username}}'s Completed Peaks</h3>
           <h5>Most Recent Summit:</h5>
@@ -163,7 +163,7 @@
           </ol>
         </div>
       </div>
-      <div class="container custom-border mt-2">
+      <div class="container custom-border mt-2 bg-light">
         <h3 class="m-2">Record a SummitQuest:</h3>
         <form action="#" id="completeQuest">
           <div class="form-group m-2">
@@ -226,4 +226,4 @@
 </div>
 <script src="/js/profile.js"></script>
 <script src="/js/logout.js"></script>
-</main>
+
