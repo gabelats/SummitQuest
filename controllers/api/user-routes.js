@@ -70,14 +70,15 @@ router.post("/login", async (req, res) => {
 });
 
 //http://localhost:3001/api/users/bio
-router.post("/bio", withAuth, async (req, res) => {
+router.put("/bio", withAuth, async (req, res) => {
   try {
     const userLogId = req.session.user_id;
     const userName = req.session.username;
     const userEmail = req.session.email;
     const userPassword = req.session.password;
+    req.session.logged_in = true;
 
-    const userBio = await Users.create({
+    const userBio = await Users.update({
       userId: userLogId,
       username: userName,
       email: userEmail,
